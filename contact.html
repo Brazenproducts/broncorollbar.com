@@ -85,7 +85,7 @@ button:hover{background:#ffb82b}
     var f = e.target;
     var data = new FormData(f);
     fetch(f.action, { method:'POST', body:data, headers:{ 'Accept':'application/json' }})
-      .then(r => r.ok ? r.json() : Promise.reject(r))
+      .then(r => r.ok  r.json() : Promise.reject(r))
       .then(() => { location.href = 'contact.html?sent=1'; })
       .catch(() => { document.getElementById('err').style.display = 'block'; });
   });
